@@ -7,7 +7,7 @@ export default function Parser() {
   const text = useContext(TextContext);
 
   return (
-    <>
+    <div id="parsed">
       {text
         .split("\n")
         .filter((l) => l !== "")
@@ -18,6 +18,6 @@ export default function Parser() {
             </div>
           );
         })}
-    </>
+    </div>
   );
 }
