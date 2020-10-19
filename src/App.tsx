@@ -1,3 +1,5 @@
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 import * as React from "react";
 import { useState, createContext } from "react";
 import { Button, Form, Grid } from "semantic-ui-react";
@@ -39,6 +41,25 @@ export default function App(): JSX.Element {
             </Grid.Column>
             <Grid.Column width="6">
               <Parser />
+              <Button
+                content="PRINT"
+                onClick={() => {
+                  const elem = document.getElementById("parsed")!;
+                  html2canvas(elem).then((canvas) => {
+                    const imgData = canvas.toDataURL("image/png");
+                    const pdf = new jsPDF();
+                    pdf.addImage(
+                      imgData,
+                      "PNG",
+                      10,
+                      10,
+                      canvas.clientHeight,
+                      canvas.clientWidth
+                    );
+                    pdf.save("sheet.pdf");
+                  });
+                }}
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
