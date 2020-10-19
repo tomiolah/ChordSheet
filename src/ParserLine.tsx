@@ -14,5 +14,12 @@ export default function ParserLine({ line }: ParserLineProps) {
     );
   }
 
+  if (line.startsWith("---[")) {
+    const sectionName = line.replace("---[", "").replace("]---", "");
+    return (
+      <b>{sectionName}</b>
+    );
+  }
+
   return <></>;
 }
