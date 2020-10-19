@@ -1,0 +1,29 @@
+body {
+  font-size: medium;
+}
+
+.chordline {
+  line-height: 2.5;
+}
+
+.chordline span {
+  position: relative;
+  font-size: large;
+}
+
+.chordline span strong {
+  position: absolute;
+  top: -1em;
+  left: 0;
+  font: bold 130%/1 monospace;
+  color: #0f8bff;
+}
+
+.chordline span strong span {
+  display: none;
+}
+
+.sectionName {
+  font-size: larger;
+  text-decoration: underline;
+}

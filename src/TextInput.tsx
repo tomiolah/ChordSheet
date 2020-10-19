@@ -13,6 +13,7 @@ export default function TextInput(props: TextInputProps) {
   return (
     <Form>
       <Form.TextArea
+        rows={Math.floor(window.innerHeight / 20)}
         label="Input"
         value={text}
         onChange={(e) => {
