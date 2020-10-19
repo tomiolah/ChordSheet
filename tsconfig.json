@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "lib": ["DOM", "ES5", "ES6", "ES2016"],
+    "strict": true
+  },
+  "include": [
+    "src/**/*", "temp/TextInput.tsx"
+  ]
+}
