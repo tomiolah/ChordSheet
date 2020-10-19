@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState, createContext } from "react";
 import { Grid } from "semantic-ui-react";
+import Parser from "./Parser";
 
 export const TextContext = createContext("");
 
@@ -17,7 +18,7 @@ export default function App(): JSX.Element {
             <TextInput setter={(value: string) => setText(value)} />
           </Grid.Column>
           <Grid.Column width="6">
-            <p>{text}</p>
+            <Parser />
           </Grid.Column>
         </Grid.Row>
       </Grid>
